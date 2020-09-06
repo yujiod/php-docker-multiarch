@@ -1,0 +1,12 @@
+
+image: yujiod/php-multiarch:latest
+manifests:
+  - image: yujiod/php-multiarch:amd64
+    platform:
+      architecture: amd64
+      os: linux
+  - image: yujiod/php-multiarch:arm64v8
+    platform:
+      architecture: arm64
+      os: linux
+      variant: v8
