@@ -2,6 +2,9 @@ FROM debian:buster-slim AS builder
 
 # Download QEMU, see https://github.com/docker/hub-feedback/issues/1261
 ENV QEMU_URL https://github.com/balena-io/qemu/releases/download/v3.0.0%2Bresin/qemu-3.0.0+resin-aarch64.tar.gz
+RUN apt-get update && apt-get install -y curl \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 RUN curl -L ${QEMU_URL} | tar zxvf - -C . --strip-components 1
 
 ARG TAG
