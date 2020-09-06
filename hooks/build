@@ -14,4 +14,4 @@ if [ "$TAG" = "7.2" -o "$TAG" = "7.3" ]; then
     ZIP_OPT="--with-libzip"
 fi
 
-docker build --build-arg TAG="${TAG}" --build-arg GD_OPT="${GD_OPT}" --build-arg ZIP_OPT="${ZIP_OPT}" -t "${IMAGE_NAME}" .
+docker build --build-arg TAG="${TAG}" --build-arg GD_OPT="${GD_OPT}" --build-arg ZIP_OPT="${ZIP_OPT}" -t "${IMAGE_NAME}" -f "${DOCKERFILE_PATH}" .
