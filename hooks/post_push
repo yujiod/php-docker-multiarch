@@ -11,5 +11,5 @@ chmod +x manifest-tool
 
 ./manifest-tool push from-args \
     --platforms linux/amd64,linux/arm64/v8 \
-    --template ${IMAGE_NAME}:ARCHVARIANT-${TAG} \
-    --target ${IMAGE_NAME}:${TAG}
+    --template ${DOCKER_REPO}:ARCHVARIANT-${TAG} \
+    --target ${DOCKER_REPO}:${TAG}
