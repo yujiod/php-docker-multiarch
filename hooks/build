@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Remove arch prefix
 TAG=`echo ${DOCKER_TAG:-latest} | sed -e 's/\(amd64|arm64v8\)-//'`
